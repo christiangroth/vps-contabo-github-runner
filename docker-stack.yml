@@ -2,7 +2,7 @@ version: "3"
 
 services:
   github-runner:
-    image: myoung34/github-runner:ubuntu-latest
+    image: myoung34/github-runner:2.332.0-ubuntu-noble
     deploy:
       replicas: 2
       restart_policy:
