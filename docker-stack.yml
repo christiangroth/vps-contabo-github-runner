@@ -16,9 +16,11 @@ services:
           cpus: "0.25"
           memory: 256M
     environment:
+      RUNNER_NAME: contabo-runner
       RUNNER_WORKDIR: "/tmp/runner/work"
       RUNNER_LABELS: "selfhosted"
       RUNNER_SCOPE: "repo"
+      RUNNER_TOKEN: "${GH_RUNNER_TOKEN}"
       REPO_URL: "https://github.com/christiangroth/${GH_REPO}"
       EPHEMERAL: "true"
       DISABLE_AUTO_UPDATE: "true"
