@@ -18,7 +18,7 @@ jobs:
         GH_REPO: ${{ secrets.GH_REPO }}
       with:
         host: ${{ secrets.CONTABO_SSH_HOST }}
-        username: github-deployer
+        username: ${{ secrets.CONTABO_SSH_USER }}
         key: ${{ secrets.CONTABO_SSH_PRIVATE_KEY }}
         port: 22
         envs: GIT_PROJECT,DOCKER_STACK,GH_ACCESS_TOKEN,GH_REPO
