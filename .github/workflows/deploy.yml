@@ -33,7 +33,7 @@ jobs:
           
           echo "deploying docker stack"
           GH_ACCESS_TOKEN=$GH_ACCESS_TOKEN GH_REPO=$GH_REPO \
-            docker stack deploy --detach=false --prune --with-registry-auth --resolve-image changed -c docker-stack.yml $DOCKER_STACK
+            docker stack rm $DOCKER_STACK
           sleep 5
           
           echo
